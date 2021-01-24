@@ -28,7 +28,7 @@ const Tabs = (topics) => {
   top.appendChild(tab1);
   // top.appendChild(tab2);
   // top.appendChild(tab3);
-  console.log(top)
+  
   return top;
   // <div class="topics">
   //   <div class="tab">javascript</div>
