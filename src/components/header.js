@@ -5,6 +5,31 @@ const Header = (title, date, temp) => {
   // The tags used, the hierarchy of elements and their attributes must match the provided markup exactly!
   // The text inside elements will be set using their `textContent` property (NOT `innerText`).
   //
+
+  //Create the elements.
+  let header = document.createElement('div');
+  let currentDate = document.createElement('span');
+  let head = document.createElement('h1');
+  let tempi = document.createElement('span');
+
+  //Add classes
+  header.classList.add('title');
+  currentDate.classList.add('date');
+  tempi.classList.add('temp');
+
+  //Add Content.
+  currentDate.textContent = date;
+  head.textContent = title;
+  tempi.textContent = temp;
+
+  //Placeing things in order
+  header.appendChild(currentDate);
+  header.appendChild(head);
+  header.appendChild(tempi);
+  
+  return header;
+
+
   //  <div class="header">
   //    <span class="date">{ date }</span>
   //    <h1>{ title }</h1>
