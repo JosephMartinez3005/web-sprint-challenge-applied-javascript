@@ -29,7 +29,7 @@ const Header = (title, date, temp) => {
     header.appendChild(h1)
     header.appendChild(tempi)
 
-      console.log(header)
+      
 return header;
   //  <div class="header">
   //    <span class="date">{ date }</span>
@@ -42,7 +42,9 @@ return header;
 
 const headerAppender = (selector) => {
   let appender = document.querySelector(`${selector}`)
-  appender.appendChild(Header())
+  let headerComp = Header();
+  return appender.appendChild(headerComp);
+  
   // TASK 2
   // ---------------------
   // Implement this function taking a css selector as its only argument.
