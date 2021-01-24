@@ -38,9 +38,9 @@ const Card = (article) => {
   topDiv.addEventListener('click', (event) =>{
     console.log(topHeadline)
   })
+
   
  return topDiv
-
 
   // <div class="card">
   //   <div class="headline">{ headline }</div>
@@ -58,10 +58,28 @@ const cardAppender = (selector) => {
   let selected = document.querySelector(selector);
   axios.get('https://lambda-times-api.herokuapp.com/articles')
 .then(res =>{
-  res.data.articles.bootstrap.forEach(item =>{
+  res.data.articles.bootstrap.forEach((item) =>{
     const a = Card(item);
-    selected.appendChild(a)
+    selected.appendChild(a);
   })
+  res.data.articles.javascript.forEach((item) =>{
+    const b = Card(item);
+    selected.appendChild(b)
+  })
+  res.data.articles.jquery.forEach((item) =>{
+    const c = Card(item);
+    selected.appendChild(c)
+  })
+  res.data.articles.node.forEach((item) =>{
+    const c = Card(item);
+    selected.appendChild(c)
+  })
+  res.data.articles.technology.forEach((item) =>{
+    const d = Card(item);
+    selected.appendChild(d)
+  })
+  
+
 })
   // TASK 6
   // ---------------------
