@@ -7,6 +7,27 @@ const Tabs = (topics) => {
   // The tags used, the hierarchy of elements and their attributes must match the provided markup!
   // The text inside elements will be set using their `textContent` property (NOT `innerText`).
   //
+
+  //
+  const top = document.createElement('div');
+  const tab1 = document.createElement('div')
+  const tab2 = document.createElement('div')
+  const tab3 = document.createElement('div')
+
+  top.classList.add('topics');
+  tab1.classList.add('tab');
+  tab2.classList.add('tab');
+  tab3.classList.add('tab');
+
+  tab1.textContent = topics[0];
+  tab2.textContent = topics[1];
+  tab3.textContent = topics[2];
+
+  top.appendChild(tab1);
+  top.appendChild(tab2);
+  top.appendChild(tab3);
+  
+  return top;
   // <div class="topics">
   //   <div class="tab">javascript</div>
   //   <div class="tab">bootstrap</div>
@@ -17,6 +38,8 @@ const Tabs = (topics) => {
 
 const tabsAppender = (selector) => {
   // TASK 4
+  let selected = document.querySelector(selector);
+  
   // ---------------------
   // Implement this function which takes a css selector as its only argument.
   // It should obtain topics from this endpoint: `https://lambda-times-api.herokuapp.com/topics`
