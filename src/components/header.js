@@ -39,7 +39,7 @@ const Header = (title, date, temp) => {
 
 const headerAppender = (selector) => {
   const appender = document.querySelector(selector);
-  let newHeader = Header("Woof", "1-24-21",'98' );
+  let newHeader = Header('Woof', "1-24-21",'72°' );
   appender.appendChild(newHeader)
   
  
